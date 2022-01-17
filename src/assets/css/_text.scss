@@ -1,0 +1,25 @@
+.text{
+    margin-top: 100px;
+    h3{
+        color: #606060;
+        font-size: 18px;
+        padding-left: 10px;
+        position: relative;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        &::after{
+            content: '';
+            width: 3px;
+            height: 100%;
+            background-color: $first_color;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    h1{
+        font-size: 46px;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+}

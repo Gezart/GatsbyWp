@@ -1,0 +1,38 @@
+.services{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-top: 50px;
+    .service{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #e5e5e5;
+        padding: 30px;
+        svg{
+            width: 40px;
+            height: 40px;
+            g{
+               stroke: $first_color;
+            }
+            rect, polyline{
+                stroke: $first_color !important;
+            }   
+            path{
+                stroke: $first_color;
+            }
+        }
+        h3{
+            font-size: 20px;
+            text-align: center;
+            line-height: 36px;
+            margin-bottom: 15px;
+        }
+        p{
+            font-size: 16px;
+            color: #777;
+            text-align: center;
+        }
+    }
+}
