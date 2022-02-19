@@ -1,3 +1,4 @@
+import {GatsbyImage,  getImage } from 'gatsby-plugin-image';
 import React from 'react'
 import Container from '../Container/Container'
 const AboutUs = (props) => {
@@ -5,7 +6,7 @@ const AboutUs = (props) => {
     const title = aboutUs.title;
     const content = aboutUs.content;
     const buttonText = aboutUs.buttonText;
-    const image = aboutUs.image;
+    const image = getImage(aboutUs.image.localFile);
     return (
         <Container>
         <div className='plain-text'>
@@ -15,9 +16,10 @@ const AboutUs = (props) => {
                 <button>{buttonText}</button>
             </div>
             <div className='image'>
-                <img src={image ? image.mediaItemUrl : ''} alt="" />
+                <GatsbyImage image={image} alt="About image"/>
+                {/* <img src={image ? image.mediaItemUrl : ''} alt="" /> */}
+                {/* <GatsbyImage src={image ? image.mediaItemUrl : ''} alt=""></GatsbyImage> */}
             </div>
-
         </div>
         </Container>
     )

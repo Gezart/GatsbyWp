@@ -21,6 +21,7 @@ const Header = () => {
       }
     }
     `)
+    console.log(data);
     return (
         <>
             <Navigation menu={data.wpMenu.menuItems.nodes} />

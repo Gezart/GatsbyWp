@@ -1,5 +1,9 @@
 .header {
-  background-color: blue;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .header .header_wrapper {

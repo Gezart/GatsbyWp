@@ -14,10 +14,12 @@ module.exports = {
         baseUrl: `localhost:8000/`, // site url without http/https
         protocol: `http`,
         hostingWPCOM: false,
-        useACF: false,
+        useACF: true,
       },
     },
     `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`, 
   ],
   
 }

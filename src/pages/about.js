@@ -12,7 +12,7 @@ const About = ({data}) => {
     return (
         <>
             <Header />
-            <Banner banner={about.banner.banner}/>
+            <Banner title={about.banner.banner.title} content={about.banner.banner.content} background={about.banner.banner.background}></Banner>
             <AboutUs  aboutUs= {about.aboutUs}/>
             <Certificates certificates={about.certificates.certificates} />
             <Services services={about.services}/>
@@ -44,13 +44,21 @@ export const data = graphql`
           url
         }
         image {
-          mediaItemUrl
+          localFile {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+            }
+          }
         }
       }
       certificates {
         certificates {
           image {
-            mediaItemUrl
+            localFile {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+              }
+            }
           }
         }
       }
@@ -73,8 +81,6 @@ export const data = graphql`
           }
         }
       }
-
-
     }
   }
 `

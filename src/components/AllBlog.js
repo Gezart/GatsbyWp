@@ -10,8 +10,10 @@ const AllBlog = ({posts}) => {
                     <div className="blog-image">
                         <img src={post.featuredImage ? post.featuredImage.node.mediaItemUrl : ''} alt="" />
                     </div>
-                    <Link to={url + "/blog/" + post.slug}><h1>{post.title}</h1></Link>
-                    <p>{post.content}</p>
+                   <div className="blog-content">
+                        <Link to={url + "/blog/" + post.slug}><h1>{post.title}</h1></Link>
+                        <p>{post.content}</p>
+                   </div>
                 </div>
             )}
         </div>
